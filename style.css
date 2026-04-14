@@ -1,0 +1,129 @@
+/* Reset Dasar */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #1a73e8;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* Navigasi */
+nav {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    display: flex; /* Flexbox */
+    justify-content: center;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #1a73e8;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #0d47a1;
+    text-decoration: underline;
+}
+
+/* Layout Container dengan Flexbox */
+.container {
+    display: flex;
+    flex-direction: row; /* Layout menyamping */
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+    gap: 20px;
+}
+
+/* Bagian Utama */
+main {
+    flex: 3; /* Mengambil ruang lebih banyak */
+}
+
+article {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+article h2 {
+    color: #1a73e8;
+    margin-bottom: 15px;
+}
+
+/* Sidebar (Aside) */
+aside {
+    flex: 1; /* Mengambil ruang lebih sedikit */
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    height: fit-content;
+}
+
+.profile-card {
+    text-align: center;
+}
+
+/* CSS untuk Gambar agar termuat dengan benar & rapi */
+aside img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 15px 0;
+    border: 4px solid #1a73e8;
+}
+
+.bio p {
+    margin: 5px 0;
+    font-size: 0.95rem;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* Responsivitas Layar Kecil */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Menumpuk vertikal di HP */
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
